@@ -1,0 +1,11 @@
+.env
+.github
+node_modules
+.session-state.json
+doc
+dist
+coverage
+logs
+*.log
+*.tsbuildinfo   
+.DS_Store

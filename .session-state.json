@@ -1,0 +1,131 @@
+{
+  "session_id": "YYYY-MM-DD",
+  "session_type": "daily",
+  "duration_minutes": 0,
+  
+  "timeline": {
+    "started_at": "ISO 8601 timestamp",
+    "ended_at": "ISO 8601 timestamp or null if in-progress"
+  },
+  
+  "previous_session": {
+    "id": "YYYY-MM-DD or null",
+    "final_commit": "git hash or null",
+    "final_commit_message": "string"
+  },
+  
+  "work_completed": {
+    "commits": [
+      {
+        "hash": "commit hash",
+        "message": "commit message (should start with [type][date])",
+        "files_changed": 0,
+        "lines_added": 0
+      }
+    ],
+    "features_added": ["feature 1", "feature 2"],
+    "tests_added": ["test file 1", "test file 2"],
+    "documentation_updated": ["file 1", "file 2"]
+  },
+  
+  "build_status": {
+    "npm_install": "✓ passing | ✗ failed: reason",
+    "npm_build": "✓ passing | ✗ failed: reason",
+    "npm_test": "✓ X/Y passing | ✗ Y failed: [list]",
+    "db_migrations": "✓ latest applied: migration_name | ✗ failed: reason",
+    "server_start": "✓ starts without crash | ✗ crash: reason",
+    "last_verified_at": "ISO timestamp"
+  },
+  
+  "architecture_health": {
+    "locked_decisions_intact": true,
+    "new_packages_added": [],
+    "forbidden_patterns_detected": [],
+    "layer_boundaries_violated": [],
+    "schema_changes_made": [],
+    "notes": "Any architectural observations"
+  },
+  
+  "code_quality_metrics": {
+    "test_coverage_percent": 0,
+    "eslint_warnings": 0,
+    "type_errors": 0,
+    "notes": "Any quality observations"
+  },
+  
+  "outstanding_tasks": [
+    {
+      "id": "task_001",
+      "description": "Task description",
+      "status": "not_started | in_progress | blocked",
+      "priority": "must_have | nice_to_have",
+      "estimated_hours": 0,
+      "blocker_reason": "reason if blocked"
+    }
+  ],
+  
+  "blockers": [
+    {
+      "id": "blocker_001",
+      "description": "What's blocking",
+      "blocked_tasks": ["task_001"],
+      "requires_human_decision": true,
+      "decision_question": "What should we do?",
+      "proposed_solutions": ["Option A", "Option B"]
+    }
+  ],
+  
+  "next_session_plan": {
+    "session_date": "YYYY-MM-DD (recommended next day)",
+    "theme": "Feature area (e.g., Authentication, Service CRUD)",
+    "objectives": [
+      "objective 1",
+      "objective 2"
+    ],
+    "prerequisites": [
+      "Latest code in main branch",
+      "PostgreSQL running",
+      "npm install fresh (if package.json changed)"
+    ],
+    "estimated_duration_minutes": 0,
+    "success_criteria": [
+      "npm test passes",
+      "specific endpoints working",
+      "coverage at X%"
+    ]
+  },
+  
+  "decision_points": [
+    {
+      "question": "The actual design decision made",
+      "decision": "The choice made",
+      "rationale": "Why this choice",
+      "documented_in": "agents.md | ARCHITECTURE.md | code comment"
+    }
+  ],
+  
+  "interview_value": {
+    "what_shows_technical_depth": [
+      "design decision X",
+      "test coverage Y",
+      "architecture Z"
+    ],
+    "what_shows_communication": [
+      "clear README",
+      "documented decisions",
+      "commit message quality"
+    ],
+    "what_shows_ownership": [
+      "comprehensive tests",
+      "error handling",
+      "future-proofing decisions"
+    ]
+  },
+  
+  "handoff_readiness": {
+    "can_new_person_start_in_5_mins": false,
+    "can_new_person_understand_decisions": false,
+    "can_new_person_extend_features": false,
+    "notes": "What's still needed for 100% handoff-ready"
+  }
+}
