@@ -1,7 +1,7 @@
 .env
-.github
+/.github/
 node_modules
-.session-state.json
+/.session-state.json
 doc
 dist
 coverage
