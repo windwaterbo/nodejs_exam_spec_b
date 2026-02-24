@@ -70,6 +70,7 @@ const swaggerSpec = {
           order: { type: 'integer', default: 0 },
           isPublic: { type: 'boolean', default: true },
           isRemove: { type: 'boolean', default: false },
+          shopId: { type: 'string', format: 'uuid', default: null },
           createdAt: { type: 'string', format: 'date-time' },
           updatedAt: { type: 'string', format: 'date-time' }
         }
